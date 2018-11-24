@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+<table class="table table-hover table-sm table-stripped">
+    <tbody>
+        <tr>
+            <td align="center"><b><label> Customer ID. </label> {{ id }} </b></td>
+            {% for predict_prob in acc %}
+                <td align="center"><b> <label> Accuracy {{ predict_prob}}</label> </b></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center">
+                <img src="data:image/png;base64,{{ scan_img }}" style="width:244px;height:224px;" class="img-rounded"/>
+            </td>
+            <td align="center">
+                <img src="data:image/png;base64,{{ org_img }}" style="width:244px;height:224px;" class="img-rounded"/>
+            </td>
+            {% for predict_prob in acc %}
+                <td class="vert-align" align="center"> {{ predict_prob }}
+                  <div class="container">
+                <h2>Accuracy Bar</h2>
+                <div class="progress">
+                  <div class="progress-bar" style="width:'{{ predict_prob}}'%">{{ predict_prob }}%</div>
+                </div>
+              </div>
+
+                </td>
+            {% endfor %}
+        </tr>
+
+<!--
+
+
+        <tr>
+          <label>Feature Extraction of image </label>
+            <td align="center"><b><label> Scanned Image. </label> {{ id }} </b></td>
+            {% for predict_prob in acc %}
+                <td align="center"><b> <label> Original Image</label> </b></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center">
+                <img src="data:image/png;base64,{{ ft1 }}" style="width:244px;height:224px;" class="img-rounded"/>
+            </td>
+            <td align="center">
+                <img src="data:image/png;base64,{{ org_img }}" style="width:244px;height:224px;" class="img-rounded"/>
+            </td>
+            {% for predict_prob in acc %}
+                <td class="vert-align" align="center"> {{ predict_prob }}
+                </td>
+            {% endfor %}
+        </tr> -->
+    </tbody>
+</table>
+{% endblock %}
+{% block nav_buttons %}
+<a class="btn btn-default navbar-btn" href='{{ url_for('prediction')}}'>Start Over</a>
+<a class="btn btn-default navbar-btn" href='{{ url_for('prediction')}}'>Select New Files</a>
+{% endblock %}
