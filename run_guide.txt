@@ -1,0 +1,21 @@
+#Signature verification API project
+
+#Framework used to develope this project 
+	1.Tensorflow
+	2.Keras
+	3.flask
+	4.python3.6
+	5.opecv3
+	6.PILLOW
+
+#Installation of requirement files
+	 pip3 install -r requirements.txt
+#Running of project
+	Navigate to signature_verification API
+	run the python3 api.py
+	> navigate to broweser with http://127.0.0.1:5003/
+	> Do the registration of customer with ID and it's original signature
+	# To Find The Accuracy of signature
+	> navigate to home tab > Match
+	> Enter the customer ID > upload the scaned image
+	As Result we will get the accuracy    
