@@ -179,7 +179,7 @@ system-service==0.3
 systemd-python==234
 tables==3.4.2
 tensorboard==1.8.0
-tensorflow==1.8.0
+tensorflow==1.15.2
 tensorflow-gpu==1.8.0
 tensorlayer==1.8.4
 termcolor==1.1.0
