@@ -33,7 +33,7 @@ eventlet==0.24.1
 feedfinder2==0.0.4
 feedparser==5.2.1
 Flask==1.0.2
-Flask-Cors==3.0.4
+Flask-Cors==3.0.9
 Flask-SocketIO==3.0.2
 Flask-WTF==0.14.2
 gast==0.2.0
