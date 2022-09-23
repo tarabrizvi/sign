@@ -113,7 +113,7 @@ pipreqs==0.4.9
 plotly==2.6.0
 progressbar==2.5
 prompt-toolkit==1.0.15
-protobuf==3.5.2.post1
+protobuf==3.18.3
 ptyprocess==0.5.2
 pycairo==1.16.2
 pycocotools==2.0.0
